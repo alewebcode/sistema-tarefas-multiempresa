@@ -103,8 +103,10 @@ docker compose exec backend php artisan db:seed
 O sistema utiliza o **[MailHog](https://github.com/mailhog/MailHog)** para capturar os emails enviados em ambiente de desenvolvimento.
 Isso permite testar notificações sem enviar emails reais.
 
+```bash
 - Acesse a interface do MailHog em: [http://localhost:8025](http://localhost:8025)
 - Todos os emails enviados pela aplicação aparecerão lá automaticamente.
+```
 
 ## ⏳ Filas
 
