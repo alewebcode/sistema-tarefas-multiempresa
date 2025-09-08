@@ -52,8 +52,6 @@ Sistema de gerenciamento de tarefas com multitenancy, autenticação JWT e envio
 # Clonar o repositório
 git clone [url-do-repositorio]
 
-
-
 ## 🔧 Configuração
 
 ### Variáveis de Ambiente (.env)
@@ -108,14 +106,12 @@ Isso permite testar notificações sem enviar emails reais.
 - Acesse a interface do MailHog em: [http://localhost:8025](http://localhost:8025)
 - Todos os emails enviados pela aplicação aparecerão lá automaticamente.
 
----
-
 ## ⏳ Filas
 
 O envio de emails é assíncrono e utiliza o **driver Database** do Laravel.
 Os jobs ficam armazenados na tabela `jobs` até serem processados pelo worker.
 
-### 🔹 Executar o worker manualmente
+### 🔹 Executar o worker manualmente (Opcional)
 
 ```bash
 docker compose exec backend php artisan queue:work
