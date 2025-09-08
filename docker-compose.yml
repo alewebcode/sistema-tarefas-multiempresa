@@ -27,7 +27,7 @@ services:
       - DB_HOST=postgres
       - DB_PORT=5432
       - DB_DATABASE=taskmanager
-      - DB_USERNAME=taskmanager_user
+      - DB_USERNAME=admin
       - DB_PASSWORD=123456
       - JWT_SECRET=NSHUKu3kNNQZF0HiejG6ni0fgwGGcJq0v8m1wOFQWZlkvH6aeyeb64PO4AfxMjKf
       - MAIL_MAILER=smtp
@@ -78,7 +78,7 @@ services:
       - "5432:5432"
     environment:
       POSTGRES_DB: taskmanager
-      POSTGRES_USER: taskmanager_user
+      POSTGRES_USER: admin
       POSTGRES_PASSWORD: 123456
     volumes:
       - postgres_data:/var/lib/postgresql/data

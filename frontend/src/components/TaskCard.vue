@@ -86,7 +86,13 @@ export default {
 
     formatDate(date) {
       if (!date) return "";
-      return new Date(date).toLocaleDateString("pt-BR");
+      const dateObj = new Date(date);
+
+      const correctedDate = new Date(
+        dateObj.getTime() + dateObj.getTimezoneOffset() * 60000
+      );
+
+      return correctedDate.toLocaleDateString("pt-BR");
     },
   },
 };

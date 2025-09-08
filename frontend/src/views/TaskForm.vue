@@ -126,7 +126,7 @@ import { required } from "vee-validate/dist/rules";
 
 extend("required", {
   ...required,
-  message: "Informe o campo título",
+  message: "{_field_} é obrigatório",
 });
 
 export default {
@@ -197,7 +197,12 @@ export default {
           description: task.description || "",
           status: task.status,
           priority: task.priority,
-          due_date: task.due_date ? new Date(task.due_date) : null,
+          due_date: task.due_date
+            ? new Date(
+                new Date(task.due_date).getTime() +
+                  new Date().getTimezoneOffset() * 60000
+              )
+            : null,
         };
       } else {
         this.$router.push("/dashboard");
@@ -236,11 +241,11 @@ export default {
 
 .my-datepicker {
   border: none !important;
-  box-shadow: none !important; /* Também remove a sombra se houver */
+  box-shadow: none !important;
 }
 
 .error-message {
-  color: #dc3545; /* vermelho bootstrap */
+  color: #dc3545;
   font-size: 14px;
   margin-top: 5px;
   display: block;
