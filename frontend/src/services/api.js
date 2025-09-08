@@ -20,15 +20,32 @@ api.interceptors.request.use((config) => {
 });
 
 // Interceptor de resposta
-axios.interceptors.response.use(
+let isRedirecting = false;
+
+api.interceptors.response.use(
   (response) => response,
   (error) => {
-    if (error.response?.status === 401) {
-      localStorage.removeItem("token");
-      localStorage.removeItem("user");
-      store.dispatch("auth/logout");
-      router.push("/login");
+    const status = error.response?.status;
+
+    if (status === 401 && !isRedirecting) {
+      const currentRoute = router.currentRoute.fullPath;
+
+      if (currentRoute !== "/login") {
+        isRedirecting = true;
+
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+        store.dispatch("auth/logout");
+
+        // adiando o redirecionamento para evitar conflitos
+        setTimeout(() => {
+          router.replace("/login").finally(() => {
+            isRedirecting = false;
+          });
+        }, 0);
+      }
     }
+
     return Promise.reject(error);
   }
 );
