@@ -1,0 +1,14 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "askForPassword": true,
+      "driver": "PostgreSQL",
+      "name": "tasks multitenancy",
+      "database": "taskmanager",
+      "username": "taskmanager_user"
+    }
+  ]
+}
