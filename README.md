@@ -54,7 +54,7 @@ git clone [url-do-repositorio]
 
 ## 🔧 Configuração
 
-### Variáveis de Ambiente (.env)
+#criar arquivo .env
 cp .env.example .env
 
 #Executar os comandos
@@ -62,6 +62,7 @@ composer install
 php artisan key:generate
 php artisan jwt:secret
 
+### Editar variáveis de Ambiente (.env)
 
 # Configurações do banco
 DB_CONNECTION=pgsql
