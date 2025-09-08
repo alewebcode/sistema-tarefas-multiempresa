@@ -54,9 +54,8 @@ git clone [url-do-repositorio]
 
 
 
-## 🔧 Configuração
+## 🔧 Configuração (.env)
 
-### Variáveis de Ambiente (.env)
 cp .env.example .env
 php artisan key:generate
 php artisan jwt:secret
@@ -87,7 +86,7 @@ MAIL_FROM_ADDRESS=noreply@taskmanager.com
 
 Para executar com Docker:
 
-```bash
+
 # Construir e iniciar containers
 docker compose up -d
 
@@ -95,11 +94,11 @@ docker compose up -d
 docker compose exec backend  php artisan migrate
 docker compose exec backend  php artisan db:seed
 
-````
+
 
 ## 📧 Emails
 
-O sistema utiliza o **[MailHog](https://github.com/mailhog/MailHog)** para capturar os emails enviados em ambiente de desenvolvimento.  
+O sistema utiliza o **[MailHog](https://github.com/mailhog/MailHog)** para capturar os emails enviados em ambiente de desenvolvimento.
 Isso permite testar notificações sem enviar emails reais.
 
 - Acesse a interface do MailHog em: [http://localhost:8025](http://localhost:8025)
@@ -109,7 +108,7 @@ Isso permite testar notificações sem enviar emails reais.
 
 ## ⏳ Filas
 
-O envio de emails é assíncrono e utiliza o **driver Database** do Laravel.  
+O envio de emails é assíncrono e utiliza o **driver Database** do Laravel.
 Os jobs ficam armazenados na tabela `jobs` até serem processados pelo worker.
 
 ### 🔹 Executar o worker manualmente
@@ -117,9 +116,9 @@ Os jobs ficam armazenados na tabela `jobs` até serem processados pelo worker.
 ```bash
 docker compose exec backend php artisan queue:work
 
-```
+````
 
-## 📚 Acesso a aplicação
+## 🖥️ Acesso a aplicação
 
 A aplicação estará disponível em:
 
@@ -142,7 +141,6 @@ Ao subir os containers, três usuários de teste são automaticamente criados no
 ### Autenticação
 
 - `POST /api/login` - Fazer login
-- `POST /api/logout` - Fazer logout
 
 ### Tarefas
 
