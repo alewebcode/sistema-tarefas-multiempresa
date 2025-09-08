@@ -18,6 +18,8 @@ Sistema de gerenciamento de tarefas com multitenancy, autenticação JWT e envio
 - **Vue Router**
 - **Axios**
 
+### Docker
+
 ## 📋 Funcionalidades
 
 ### ✅ Autenticação
@@ -86,7 +88,7 @@ MAIL_FROM_ADDRESS=noreply@taskmanager.com
 
 ```
 
-## 🐳 Docker
+## 🐳 Docker (Requisito Bônus)
 
 ```bash
 #Para executar com Docker:
@@ -110,7 +112,7 @@ Isso permite testar notificações sem enviar emails reais.
 - Acesse a interface do MailHog em: [http://localhost:8025](http://localhost:8025)
 - Todos os emails enviados pela aplicação aparecerão lá automaticamente.
 
-## ⏳ Filas
+## ⏳ Filas (Requisito Bônus)
 
 O envio de emails é assíncrono e utiliza o **driver Database** do Laravel.
 Os jobs ficam armazenados na tabela `jobs` até serem processados pelo worker.
