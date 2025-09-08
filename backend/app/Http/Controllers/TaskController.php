@@ -72,7 +72,7 @@ class TaskController extends Controller
         // Enviar email de notificação
         try {
             
-            Mail::to($user->email)->queue((new TaskCompleted($task, $user))->delay(now()->addSeconds(30)));
+            Mail::to($user->email)->queue((new TaskCreated($task, $user))->delay(now()->addSeconds(30)));
         } catch (\Exception $e) {
    
             \Log::error('Falha ao enviar email de criação de tarefa: ' . $e->getMessage());
