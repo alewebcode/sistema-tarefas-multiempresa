@@ -84,13 +84,12 @@ MAIL_FROM_ADDRESS=noreply@taskmanager.com
 
 ```
 
-`
-
 ## 🐳 Docker
 
-Para executar com Docker:
+```bash
+#Para executar com Docker:
 
-# Construir e iniciar containers
+#Construir e iniciar containers
 
 docker compose up -d
 
@@ -98,6 +97,8 @@ docker compose up -d
 
 docker compose exec backend php artisan migrate
 docker compose exec backend php artisan db:seed
+
+```
 
 ## 📧 Emails
 
