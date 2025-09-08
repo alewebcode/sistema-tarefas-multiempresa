@@ -119,6 +119,24 @@ docker compose exec backend php artisan queue:work
 
 ```
 
+## 📚 Acesso a aplicação
+
+A aplicação estará disponível em:
+
+http://localhost:8080
+
+Usuários de teste
+
+Ao subir os containers, três usuários de teste são automaticamente criados no sistema:
+
+| Usuário                                             | Senha  |
+| --------------------------------------------------- | ------ |
+| [jonh@empresa1.com](mailto:jonh@empresa1.com)       | 123456 |
+| [jane@empresa2.com](mailto:jane@empresa2.com)       | 123456 |
+| [richard@empresa3.com](mailto:richard@empresa3.com) | 123456 |
+
+---
+
 ## 📚 API Endpoints
 
 ### Autenticação
