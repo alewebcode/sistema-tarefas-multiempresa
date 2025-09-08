@@ -54,8 +54,9 @@ git clone [url-do-repositorio]
 
 
 
-## 🔧 Configuração (.env)
+## 🔧 Configuração
 
+### Variáveis de Ambiente (.env)
 cp .env.example .env
 php artisan key:generate
 php artisan jwt:secret
@@ -153,7 +154,3 @@ Ao subir os containers, três usuários de teste são automaticamente criados no
 ## 👨‍💻 Desenvolvedor
 
 Desenvolvido por Alexandre Valim
-
-```
-
-```
