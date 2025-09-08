@@ -48,7 +48,7 @@ Sistema de gerenciamento de tarefas com multitenancy, autenticação JWT e envio
 
 ### Backend (Laravel)
 
-````bash
+```bash
 # Clonar o repositório
 git clone [url-do-repositorio]
 
@@ -82,20 +82,22 @@ MAIL_PASSWORD=null
 MAIL_ENCRYPTION=null
 MAIL_FROM_ADDRESS=noreply@taskmanager.com
 
+```
+
+`
 
 ## 🐳 Docker
 
 Para executar com Docker:
 
-
 # Construir e iniciar containers
+
 docker compose up -d
 
 # Executar as migrations
-docker compose exec backend  php artisan migrate
-docker compose exec backend  php artisan db:seed
 
-
+docker compose exec backend php artisan migrate
+docker compose exec backend php artisan db:seed
 
 ## 📧 Emails
 
@@ -117,7 +119,7 @@ Os jobs ficam armazenados na tabela `jobs` até serem processados pelo worker.
 ```bash
 docker compose exec backend php artisan queue:work
 
-````
+```
 
 ## 🖥️ Acesso a aplicação
 
