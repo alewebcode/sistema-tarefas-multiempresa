@@ -56,6 +56,9 @@ git clone [url-do-repositorio]
 
 ### Variáveis de Ambiente (.env)
 cp .env.example .env
+
+#Executar os comandos
+composer install
 php artisan key:generate
 php artisan jwt:secret
 
