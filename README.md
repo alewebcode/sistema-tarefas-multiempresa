@@ -61,7 +61,7 @@ cp .env.example .env
 php artisan key:generate
 php artisan jwt:secret
 
-```env
+
 # Configurações do banco
 DB_CONNECTION=pgsql
 DB_HOST=postgres
@@ -81,7 +81,7 @@ MAIL_USERNAME=null
 MAIL_PASSWORD=null
 MAIL_ENCRYPTION=null
 MAIL_FROM_ADDRESS=noreply@taskmanager.com
-````
+
 
 ## 🐳 Docker
 
@@ -95,7 +95,7 @@ docker compose up -d
 docker compose exec backend  php artisan migrate
 docker compose exec backend  php artisan db:seed
 
-```
+````
 
 ## 📧 Emails
 
@@ -107,7 +107,7 @@ Isso permite testar notificações sem enviar emails reais.
 
 ---
 
-## 🐳 Filas
+## ⏳ Filas
 
 O envio de emails é assíncrono e utiliza o **driver Database** do Laravel.  
 Os jobs ficam armazenados na tabela `jobs` até serem processados pelo worker.
@@ -116,6 +116,8 @@ Os jobs ficam armazenados na tabela `jobs` até serem processados pelo worker.
 
 ```bash
 docker compose exec backend php artisan queue:work
+
+```
 
 ## 📚 API Endpoints
 
@@ -135,4 +137,7 @@ docker compose exec backend php artisan queue:work
 ## 👨‍💻 Desenvolvedor
 
 Desenvolvido por Alexandre Valim
+
+```
+
 ```
